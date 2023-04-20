@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 import Image from "next/image";
 import Lottie from "react-lottie-player";
-import lotti from "./lotti1.json";
+import lotti from "./lotti_01.json";
 import CardList from "../card/CardList";
 
 type Props = {};

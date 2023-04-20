@@ -3,6 +3,16 @@ import { HiOutlineMail } from "react-icons/hi";
 import { AiOutlineLinkedin } from "react-icons/ai";
 import { AiFillGithub } from "react-icons/ai";
 import { BsTwitter } from "react-icons/bs";
+import { SiTypescript } from "react-icons/si";
+import { GrReactjs } from "react-icons/gr";
+import { SiJavascript } from "react-icons/si";
+import { GrGraphQl } from "react-icons/gr";
+import { IoLogoNodejs } from "react-icons/io";
+import { FaAws } from "react-icons/fa";
+import { TbBrandNextjs } from "react-icons/tb";
+import { FaDocker } from "react-icons/fa";
+import { SiMongodb } from "react-icons/si";
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -17,7 +27,7 @@ const Profile = (props: AboutProps) => {
   const { title, description, body, name } = props;
   return (
     <div className="bg-gradient-to-r from-gray-500 via-black to-gray-500">
-      <h2 className=" text-3xl text-white border-b-2 py-4 border-bt-bg lg:w-3/5 lg:mx-auto">
+      <h2 className="p-6 text-3xl text-white border-b-2 py-4 border-bt-bg lg:w-3/5 lg:mx-auto">
         About
       </h2>
       <div className="lg:flex lg:w-3/5 justify-between mx-auto lg:gap-8 ">
@@ -52,20 +62,36 @@ const Profile = (props: AboutProps) => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col gap-4 items-center p-4">
-          <p className=" p-2 leading-8 text-white">
-            I am currently a Freelence Web Developer. My background is Cisco
-            certified Network Engineer . I switched my career to Web Developer
-            from Network Engineer at 2017. Before Freeelencer I was frontEnd
-            Developer in Teromac and Arcon Technologies at New York City.
-            <br />I mainly working building UI, authorizations, payment
-            integrations. I using React , Redux, NextJS , TypeScript , Jest,
-            SQl, NoSql, RESTful , Tailwind , Git. I mainly working building UI,
-            authorizations, payment integrations and Using React, NextJS
-            TypeScript and CMS integration. I mainly working building UI,
-            authorizations, payment integrations and Using React, NextJS
-            TypeScript and CMS integration.
-          </p>
+        <div>
+          <div className="flex flex-col gap-4 items-center p-4">
+            <p className=" p-2 leading-8 text-white">
+              I am currently a Freelence Web Developer. My background is Cisco
+              certified Network Engineer . I switched my career to Web Developer
+              from Network Engineer at 2017. Before Freeelencer I was frontEnd
+              Developer in Teromac and Arcon Technologies at New York City.
+              <br />I mainly working building UI, authorizations, payment
+              integrations. I using React , Redux, NextJS , TypeScript , Jest,
+              SQl, NoSql, RESTful , Tailwind , Git. I mainly working building
+              UI, authorizations, payment integrations and Using React, NextJS
+              TypeScript and CMS integration. I mainly working building UI,
+              authorizations, payment integrations and Using React, NextJS
+              TypeScript and CMS integration.
+            </p>
+          </div>
+          <div className="flex flex-col p-6 gap-4 text-white font-semibold ">
+            My current Tech Stack:
+            <div className="flex gap-4">
+              <SiJavascript className="w-[30px] h-[30px] text-yellow-600" />
+              <SiTypescript className="w-[30px] h-[30px] text-sky-600" />
+              <IoLogoNodejs className="w-[30px] h-[30px] text-green-400" />
+              <GrReactjs className="w-[30px] h-[30px] text-sky-600" />
+              <TbBrandNextjs className="w-[30px] h-[30px] text-black-600" />
+              <GrGraphQl className="w-[30px] h-[30px] text-red-700" />
+              <SiMongodb className="w-[30px] h-[30px] text-green-600" />
+              <FaDocker className="w-[30px] h-[30px] text-sky-600" />
+              <FaAws className="w-[30px] h-[30px] text-yellow-400" />
+            </div>
+          </div>
         </div>
       </div>
     </div>

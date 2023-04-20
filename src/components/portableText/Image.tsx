@@ -8,9 +8,9 @@ export function SanityImage(props: any) {
   return (
     <Image
       src={urlFor(imageData).width(500).url()}
-      width={400}
+      width={200}
       alt={imageData.alt}
-      height={400}
+      height={300}
     />
   );
 }
