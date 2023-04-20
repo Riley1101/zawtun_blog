@@ -2,28 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* .box:before {
-  content: "";
-  z-index: -1;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: linear-gradient(-45deg, #60efff 0%, #00ff87 100%);
-  transform: translate3d(0px, 20px, 0) scale(1.1);
-  filter: blur(20px);
-  opacity: var(0.7);
-  transition: opacity 0.3s;
-  border-radius: inherit;
-}
-
-/* 
-* Prevents issues when the parent creates a 
-* stacking context. (For example, using the transform
-* property )
-*/
-*/ .box::after {
+.box::after {
   content: "";
   z-index: -1;
   position: absolute;
@@ -54,5 +33,11 @@
 
   .scrollbar::-webkit-scrollbar-thumb:hover {
     border: #0e766e;
+  }
+}
+
+@layer components {
+  /* This won't be included in your compiled CSS unless you actually use it */
+  .card {
   }
 }

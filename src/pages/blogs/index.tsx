@@ -1,17 +1,103 @@
 import AllPosts from "@/components/allposts/AllPosts";
 import CardList from "@/components/card/CardList";
 import { Container } from "@/layouts/Container";
-import React from "react";
+import { sanityClient } from "@/components/studio/client";
+import { ArticleProps, Category } from "@/type";
+import { useEffect, useState } from "react";
+import Meta from "@/components/Meta";
 
-type Props = {};
+interface BlogsProps {
+  articles: ArticleProps[];
+  categories: Category[];
+}
 
-export default function Blog({}: Props) {
+const query = `{
+  "articles":*[_type == "blog"]{
+  title,
+    slug,
+    _id,
+    _type,
+    body,
+    "categories":categories[0...10]->{title},
+    author->{
+      name
+    }
+},
+  "categories":*[_type=="category"]
+}`;
+
+export default function Blog(props: BlogsProps) {
+  const { articles, categories } = props;
+
+  const [data, setData] = useState(articles);
+  const [keyword, setKeyword] = useState("");
+  const [currentCategories, setCurrentCategory] = useState("");
+
+  useEffect(() => {
+    if (keyword.length > 3) {
+      let tmp = data.filter((e) =>
+        e.title.toLowerCase().includes(keyword.toLowerCase())
+      );
+      setData(tmp);
+    } else {
+      setData(articles);
+    }
+  }, [keyword]);
+
+  useEffect(() => {
+    if (currentCategories === "All") {
+      setData(articles);
+    } else if (currentCategories !== "") {
+      let res: ArticleProps[] = [];
+      articles.forEach((el) => {
+        let eachCategory = el.categories;
+        eachCategory?.forEach((item) => {
+          if (item.title.toLowerCase() === currentCategories.toLowerCase()) {
+            res.push(el);
+          }
+        });
+      });
+      setData(res);
+    }
+  }, [currentCategories]);
+
+  let handleSearch = (event: any) => {
+    setKeyword(event.target.value);
+  };
+
+  let handleFilterCategory = (title: string) => {
+    setCurrentCategory(title);
+  };
+
   return (
     <div>
       <Container>
-        <AllPosts />
-        <CardList />
+        <Meta
+          meta={{
+            title: "Blog | Zaw Z Tun",
+            image: "/images/meta_01.jpeg",
+            description:
+              "So you must ensure that every revolutionary idea you have goes into development with the appropriate rendering pattern.",
+          }}
+        ></Meta>
+        <AllPosts
+          categories={categories}
+          handleSearch={handleSearch}
+          handleFilterCategory={handleFilterCategory}
+        />
+
+        <CardList blogs={data} />
       </Container>
     </div>
   );
+}
+
+export async function getStaticProps() {
+  const data = await sanityClient.fetch(query);
+
+  return {
+    props: {
+      ...data,
+    },
+  };
 }

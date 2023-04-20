@@ -13,7 +13,8 @@ module.exports = {
       colors: {
         bg: "#18181B",
         "nav-bt": "#3F3F46",
-        "bt-bg": "#0F5E59",
+        "bd-bg": "#38BDF9",
+        "bt-bg": "#38BD",
       },
 
       keyframes: {
