@@ -10,7 +10,9 @@ const ContactForm = (props: Props) => {
     <div className="lg:flex lg:w-3/5 justify-between mx-auto">
       <div className="flex flex-col gap-4 p-4">
         <div className="leading-8 text-gray-400">
-          <h2>SUBSCRIBE TO OUR NEWSLETTER</h2>
+          <h2 className="text-transparent bg-clip-text bg-gradient-to-br from-pink-400 to-sky-600 hover:text-bd-bg">
+            SUBSCRIBE TO OUR NEWSLETTER
+          </h2>
           <p className="text-gray-400">
             The latest articles, and resources, sent to your inbox directly!
           </p>
@@ -27,7 +29,7 @@ const ContactForm = (props: Props) => {
               className=" outline-none w-full rounded-md h-[100px] p-2 border hover:border-bd-bg border-bt-bg bg-transparent"
             ></textarea>
             <input
-              placeholder=" Please enter email address "
+              placeholder=" Please enter email address. "
               className="flex outline-none w-full h-[40px] rounded-md p-2 border hover:border-bd-bg border-bt-bg bg-transparent"
               id="email"
               type="email"

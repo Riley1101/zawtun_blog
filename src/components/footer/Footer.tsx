@@ -14,16 +14,20 @@ const Footer = (props: Props) => {
       <div className="flex text-center justify-center py-4">🤖🤖🤖</div>
       <div className="lg:flex lg:w-3/5 justify-between mx-auto">
         <div className="flex gap-16 p-4 lg:flex-row">
-          <div className="flex flex-col gap-4">
-            <h2>GENERAL</h2>
+          <div className="flex flex-col gap-4 text-gray-400 text-sm">
+            <h2 className="text-transparent bg-clip-text bg-gradient-to-br from-pink-400 to-sky-600 hover:text-bd-bg">
+              GENERAL
+            </h2>
             <Link href="/">Home</Link>
             <Link href="/about">About</Link>
             <Link href="/blogs">Blogs</Link>
             <Link href="/projects">Projects</Link>
             <Link href="/snippets">Snippets</Link>
           </div>
-          <div className="flex flex-col gap-4">
-            <h2>EXTRAS</h2>
+          <div className="flex flex-col gap-4 ">
+            <h2 className="text-transparent bg-clip-text bg-gradient-to-br from-pink-400 to-sky-600 hover:text-bd-bg">
+              EXTRAS
+            </h2>
             <Link href="https://mail.google.com/">
               <HiOutlineMail className="w-[25px] h-[25px] text-red-500" />
             </Link>
