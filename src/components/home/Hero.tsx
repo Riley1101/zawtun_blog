@@ -17,9 +17,7 @@ const Hero = (props: Props) => {
               </span>
               <br />I am Zaw Z Tun.
             </h2>
-            <p className="text-2xl lg:text-2xl">
-              I am Web Developer and Blogger .
-            </p>
+            <p className="text-2xl lg:text-2xl">I am Web Developer .</p>
           </div>
           <div className="flex gap-4 py-2">
             <Link
@@ -41,14 +39,14 @@ const Hero = (props: Props) => {
             </Link>
           </div>
         </div>
-        {/* <div className="flex justify-center w-full lg:justify-end origin-center md:py-12 ">
+        <div className="flex justify-center w-full lg:justify-end origin-center md:py-12 ">
           <Lottie
             className="animate-wiggle duration-1000 w-[200px] aspect-square md:w-[300px] "
             loop
             animationData={lotti}
             play
           />
-        </div> */}
+        </div>
       </div>
     </div>
   );
