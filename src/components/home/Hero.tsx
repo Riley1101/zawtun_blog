@@ -39,7 +39,7 @@ const Hero = (props: Props) => {
             </Link>
           </div>
         </div>
-        <div className="flex justify-center w-full lg:justify-end origin-center md:py-12 ">
+        <div className="flex justify-center w-2/4 lg:justify-end origin-center md:py-12 ">
           <Lottie
             className="animate-wiggle duration-1000 w-[200px] aspect-square md:w-[300px] "
             loop
