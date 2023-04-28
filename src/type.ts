@@ -17,5 +17,6 @@ export interface ArticleProps {
   slug: Slug;
   title: string;
   body: string;
+  description: string;
   categories: Category[];
 }

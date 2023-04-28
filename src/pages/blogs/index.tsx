@@ -17,6 +17,7 @@ const query = `{
     slug,
     _id,
     _type,
+    description,
     body,
     "categories":categories[0...10]->{title},
     author->{
@@ -49,14 +50,25 @@ export default function Blog(props: BlogsProps) {
       setData(articles);
     } else if (currentCategories !== "") {
       let res: ArticleProps[] = [];
-      articles.forEach((el) => {
+
+      articles.map((el) => {
         let eachCategory = el.categories;
-        eachCategory?.forEach((item) => {
+        eachCategory?.map((item) => {
           if (item.title.toLowerCase() === currentCategories.toLowerCase()) {
             res.push(el);
           }
         });
       });
+
+      // articles.forEach((el) => {
+      //   let eachCategory = el.categories;
+      //   eachCategory?.forEach((item) => {
+      //     if (item.title.toLowerCase() === currentCategories.toLowerCase()) {
+      //       res.push(el);
+      //     }
+      //   });
+      // }
+      //);
       setData(res);
     }
   }, [currentCategories]);

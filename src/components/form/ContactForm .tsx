@@ -9,9 +9,9 @@ const ContactForm = (props: Props) => {
   return (
     <div className="lg:flex lg:w-3/5 justify-between mx-auto">
       <div className="flex flex-col gap-4 p-4">
-        <div className="leading-8">
+        <div className="leading-8 text-gray-400">
           <h2>SUBSCRIBE TO OUR NEWSLETTER</h2>
-          <p>
+          <p className="text-gray-400">
             The latest articles, and resources, sent to your inbox directly!
           </p>
         </div>
@@ -24,11 +24,11 @@ const ContactForm = (props: Props) => {
               placeholder=" Please enter your message. "
               id="message"
               name="message"
-              className=" outline-none w-full rounded-md h-[100px] bg-bg p-2 border hover:border-bd-bg border-bt-bg"
-            />
+              className=" outline-none w-full rounded-md h-[100px] p-2 border hover:border-bd-bg border-bt-bg bg-transparent"
+            ></textarea>
             <input
               placeholder=" Please enter email address "
-              className="flex outline-none bg-bg w-full h-[40px] rounded-md p-2 border hover:border-bd-bg border-bt-bg"
+              className="flex outline-none w-full h-[40px] rounded-md p-2 border hover:border-bd-bg border-bt-bg bg-transparent"
               id="email"
               type="email"
               name="email"
@@ -47,7 +47,7 @@ const ContactForm = (props: Props) => {
             />
             {state.succeeded && <p>Thank you for your message.</p>}
             <button
-              className="outline-none flex mt-4 w-full mx-auto bg-white text-bg p-2 rounded-md justify-center border-2 hover:border-bd-bg border-bt-bg"
+              className="outline-none flex mt-4 w-full mx-auto  p-2 rounded-md justify-center border-bt-bg border-b-2 border-t hover:border-bd-bg min-w-[100px] text-gray-400 hover:text-bd-bg bg-transparent"
               type="submit"
               disabled={state.submitting}
             >
@@ -61,3 +61,4 @@ const ContactForm = (props: Props) => {
 };
 
 export default ContactForm;
+//border-2 hover:border-bd-bg border-bt-bg

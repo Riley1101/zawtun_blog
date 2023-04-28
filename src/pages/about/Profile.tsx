@@ -48,16 +48,16 @@ const Profile = (props: AboutProps) => {
             </div>
             <div className="flex justify-center gap-8 py-4 text-white ">
               <Link href="https://mail.google.com/">
-                <HiOutlineMail className="w-[30px] h-[30px] text-red-500" />
+                <HiOutlineMail className="w-[25px] h-[25px] text-red-500" />
               </Link>
               <Link href="https://www.linkedin.com/in/zaw-tun-75bb52127/">
-                <AiOutlineLinkedin className="w-[30px] h-[30px] text-sky-600" />
+                <AiOutlineLinkedin className="w-[25px] h-[25px] text-sky-600" />
               </Link>
               <Link href="https://github.com/zawztun">
-                <AiFillGithub className="w-[30px] h-[30px] text-white" />
+                <AiFillGithub className="w-[25px] h-[25px] text-white" />
               </Link>
               <Link href="https://twitter.com">
-                <BsTwitter className="w-[30px] h-[30px] text-sky-400" />
+                <BsTwitter className="w-[25px] h-[25px] text-sky-400" />
               </Link>
             </div>
           </div>

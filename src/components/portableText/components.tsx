@@ -22,7 +22,9 @@ const myPortableTextComponents: PortableTextComponents = {
     ),
 
     normal: ({ children }: any) => (
-      <p className="text-base leading-loose text-gray-200">{children}</p>
+      <p className="text-base leading-loose text-gray-200 text-[19px] px-4">
+        {children}
+      </p>
     ),
   },
 

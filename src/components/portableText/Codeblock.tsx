@@ -19,7 +19,7 @@ export default function Codeblock({ value }: Props) {
     <SyntaxHighlighter
       language={value.language}
       style={atelierSulphurpoolDark}
-      customStyle={{ padding: "20px", marginBlock: "20px" }}
+      customStyle={{ padding: "20px", marginBlock: "20px", fontSize: "22px" }}
     >
       {value.code}
     </SyntaxHighlighter>

@@ -25,6 +25,7 @@ const CardList = (props: BlogsProps) => {
               author={el.author}
               _id={el._id}
               _type={el._type}
+              description={el.description}
               categories={el.categories}
             />
           ))}

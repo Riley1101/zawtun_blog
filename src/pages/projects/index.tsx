@@ -18,6 +18,7 @@ const query = `{"articles":*[_type == "project"]{
     _type,
     "categories":categories[0...10]->{title},
     body,
+    description,
     author->{
       name
     }

@@ -19,6 +19,7 @@ const query = `{
     _id,
     _type,
     body,
+    description,
     author->{
       name
     }

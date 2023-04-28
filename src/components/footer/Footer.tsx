@@ -10,7 +10,7 @@ type Props = {};
 
 const Footer = (props: Props) => {
   return (
-    <div className="bg-gradient-to-r from-gray-500 via-black to-gray-500 text-white p-4 ">
+    <div className="bg-gradient-to-r from-gray-500 via-black to-gray-500 text-gray-300 p-4 ">
       <div className="flex text-center justify-center py-4">🤖🤖🤖</div>
       <div className="lg:flex lg:w-3/5 justify-between mx-auto">
         <div className="flex gap-16 p-4 lg:flex-row">
@@ -24,11 +24,24 @@ const Footer = (props: Props) => {
           </div>
           <div className="flex flex-col gap-4">
             <h2>EXTRAS</h2>
-            <Link href="/">Newsletter</Link>
+            <Link href="https://mail.google.com/">
+              <HiOutlineMail className="w-[25px] h-[25px] text-red-500" />
+            </Link>
+            <Link href="https://www.linkedin.com/in/zaw-tun-75bb52127/">
+              <AiOutlineLinkedin className="w-[25px] h-[25px] text-sky-600" />
+            </Link>
+            <Link href="https://github.com/zawztun">
+              <AiFillGithub className="w-[25px] h-[25px] text-bwhite" />
+            </Link>
+            <Link href="https://twitter.com">
+              <BsTwitter className="w-[25px] h-[25px] text-sky-400" />
+            </Link>
+
+            {/* <Link href="/">Newsletter</Link>
             <Link href="/">Uses</Link>
             <Link href="/">Resume</Link>
             <Link href="/">Tweets</Link>
-            <Link href="/">Tags</Link>
+            <Link href="/">Tags</Link> */}
           </div>
         </div>
         <ContactForm />
@@ -36,7 +49,7 @@ const Footer = (props: Props) => {
 
       <div className="flex flex-col gap-8 justify-center items-center lg:w-3/5 lg:mx-auto lg:flex-row-reverse lg:justify-between ">
         <div className="flex gap-8 py-8">
-          <Link href="https://mail.google.com/">
+          {/* <Link href="https://mail.google.com/">
             <HiOutlineMail className="w-[30px] h-[30px] text-red-500" />
           </Link>
           <Link href="https://www.linkedin.com/in/zaw-tun-75bb52127/">
@@ -47,7 +60,7 @@ const Footer = (props: Props) => {
           </Link>
           <Link href="https://twitter.com">
             <BsTwitter className="w-[30px] h-[30px] text-sky-400" />
-          </Link>
+          </Link> */}
         </div>
 
         <h3 className="py-8b text-bt-bg "></h3>
