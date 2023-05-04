@@ -35,7 +35,6 @@ const ContactForm = (props: Props) => {
               type="email"
               name="email"
             />
-
             <ValidationError
               prefix="Email"
               field="email"

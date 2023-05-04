@@ -9,7 +9,7 @@ const config = defineConfig({
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || "",
   title: "portfolio",
   apiVersion: "2021-10-21",
-  basePath: "/admin",
+  basePath: "/studio",
   plugins: [deskTool(), visionTool(), codeInput()],
   schema: {
     types: schemaTypes,

@@ -54,5 +54,6 @@ export async function getStaticProps() {
     props: {
       user: data,
     },
+    revalidate: 10,
   };
 }

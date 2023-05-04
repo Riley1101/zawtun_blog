@@ -28,7 +28,7 @@ const query = `{
 }`;
 export default function Home(props: HomeProps) {
   const { articles } = props;
-  console.log(articles, "it is not array");
+
   return (
     <>
       <Head>
@@ -62,5 +62,6 @@ export async function getStaticProps() {
     props: {
       ...data,
     },
+    revalidate: 10,
   };
 }

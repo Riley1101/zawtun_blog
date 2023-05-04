@@ -21,6 +21,18 @@ const myPortableTextComponents: PortableTextComponents = {
       </h3>
     ),
 
+    h4: ({ children }: any) => (
+      <h4 className="text-xl leading-loose text-gray-200 text-[19px] px-4">
+        {children}
+      </h4>
+    ),
+
+    link: ({ children }: any) => (
+      <h4 className="text-xl leading-loose text-gray-200 text-[19px] px-4">
+        {children}
+      </h4>
+    ),
+
     normal: ({ children }: any) => (
       <p className="text-base leading-loose text-gray-200 text-[19px] px-4">
         {children}
@@ -38,7 +50,11 @@ const myPortableTextComponents: PortableTextComponents = {
   },
   types: {
     code: (props) => {
-      return <Codeblock {...props} />;
+      return (
+        <p className="text-[9px]">
+          <Codeblock {...props} />
+        </p>
+      );
     },
     image: SanityImage,
   },

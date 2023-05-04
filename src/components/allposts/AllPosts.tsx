@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 
 import type { Category } from "@/type";
 
@@ -18,7 +17,7 @@ const AllPosts = (props: Props) => {
           <h2 className="text-3xl">All Posts</h2>
           <p className="-scroll-ml-3.5">
             I mainly working building UI, authorizations, payment integrations.
-            I using React , Redux, NextJS , TypeScript
+            I using React , Redux, NextJS , TypeScript.
           </p>
         </div>
         <div className=" flex bg-nav-bt p-2 rounded-md">
@@ -56,13 +55,3 @@ const AllPosts = (props: Props) => {
   );
 };
 export default AllPosts;
-
-// export async function getStaticProps() {
-//   const data = await sanityClient.fetch(query);
-//   console.log(data);
-//   return {
-//     props: {
-//       ...data,
-//     },
-//   };
-// }
