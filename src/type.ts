@@ -19,4 +19,5 @@ export interface ArticleProps {
   body: string;
   description: string;
   categories: Category[];
+  readingTime: number;
 }

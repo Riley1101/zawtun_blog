@@ -7,7 +7,7 @@ type Props = {};
 
 const Hero = (props: Props) => {
   return (
-    <div className="bg-gradient-to-r from-gray-500 via-black to-gray-500 text-white w-full mx-auto overflow-x-auto">
+    <div className="bg-gray-800 text-white w-full mx-auto overflow-x-auto">
       <div className="flex flex-col-reverse w-full justify-center items-center gap-4 mx-auto lg:w-3/5 lg:mx-auto lg:flex-row lg:justify-between">
         <div className="flex flex-col gap-8 p-2 animate-fade-in-down duration-1000 scrollbar">
           <div className="flex flex-col gap-8 ">
@@ -21,7 +21,7 @@ const Hero = (props: Props) => {
           </div>
           <div className="flex gap-4 py-2">
             <Link
-              className="p-2 bg-gradient-to-r from-gray-500 via-black to-gray-500 rounded-lg border hover:border-bd-bg border-bt-bg"
+              className="p-2 bg-gray-800 rounded-lg border hover:border-bd-bg border-bt-bg"
               href="/blogs"
             >
               <span className="text-transparent bg-clip-text bg-gradient-to-br from-pink-400 to-sky-600 hover:text-bd-bg">
@@ -30,7 +30,7 @@ const Hero = (props: Props) => {
             </Link>
 
             <Link
-              className="p-2 bg-gradient-to-r from-gray-500 via-black to-gray-500 rounded-lg border hover:border-bd-bg border-bt-bg"
+              className="p-2 bg-gray-800 rounded-lg border hover:border-bd-bg border-bt-bg"
               href="/about"
             >
               <span className="text-transparent bg-clip-text bg-gradient-to-br from-pink-400 to-sky-600 hover:text-bd-bg">

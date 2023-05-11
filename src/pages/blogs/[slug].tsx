@@ -2,9 +2,9 @@ import { Container } from "@/layouts/Container";
 
 import React from "react";
 import { PostDetail } from "@/components/post/PostDetail";
-import { sanityClient } from "@/components/studio/client";
+import { sanityClient } from "@/studio/client";
 import Meta from "@/components/Meta";
-import { urlFor } from "@/components/studio/sanity_utils";
+import { urlFor } from "@/studio/sanity_utils";
 
 type Props = { data: any };
 

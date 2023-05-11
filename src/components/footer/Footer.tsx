@@ -10,7 +10,7 @@ type Props = {};
 
 const Footer = (props: Props) => {
   return (
-    <div className="bg-gradient-to-r from-gray-500 via-black to-gray-500 text-gray-300 p-4 ">
+    <div className="bg-gray-800 text-gray-300 p-4 ">
       <div className="flex text-center justify-center py-4">🤖🤖🤖</div>
       <div className="lg:flex lg:w-3/5 justify-between mx-auto">
         <div className="flex gap-16 p-4 lg:flex-row">

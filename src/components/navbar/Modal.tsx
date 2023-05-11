@@ -68,7 +68,7 @@ const lists = [
 const Modal = ({ showModal }: Props) => {
   return (
     <div
-      className="bg-gradient-to-r from-gray-500 via-black to-gray-500 text-white w-full h-screen fixed z-10 top-0 left-0 opacity-91 grid place-items-center"
+      className="bg-gray-800 text-white w-full h-screen fixed z-10 top-0 left-0 opacity-91 grid place-items-center"
       onClick={(e) => {
         showModal();
       }}

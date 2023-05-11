@@ -26,7 +26,7 @@ interface AboutProps {
 const Profile = (props: AboutProps) => {
   const { title, description, body, name } = props;
   return (
-    <div className="bg-gradient-to-r from-gray-500 via-black to-gray-500">
+    <div className="bg-gray-800">
       <h2 className="p-6 text-3xl text-white border-b-2 py-4 border-bt-bg lg:w-3/5 lg:mx-auto">
         About
       </h2>

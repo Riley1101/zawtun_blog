@@ -1,11 +1,11 @@
 import AllPosts from "@/components/allposts/AllPosts";
 import CardList from "@/components/card/CardList";
-import { sanityClient } from "@/components/studio/client";
+import { sanityClient } from "@/studio/client";
 import { Container } from "@/layouts/Container";
 import React, { useEffect, useState } from "react";
 import { ArticleProps, Category } from "@/type";
 import Meta from "@/components/Meta";
-import { urlFor } from "@/components/studio/sanity_utils";
+import { urlFor } from "@/studio/sanity_utils";
 interface ProjectProps {
   articles: ArticleProps[];
   categories: Category[];
@@ -21,7 +21,8 @@ const query = `{"articles":*[_type == "project"]{
     description,
     author->{
       name
-    }
+    },
+    "readingTime": round(length(pt::text(body)) / 5 / 180 ),
 },
   "categories":*[_type=="category"]
 }`;

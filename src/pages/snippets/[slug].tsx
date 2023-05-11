@@ -1,7 +1,7 @@
 import Meta from "@/components/Meta";
 import { PostDetail } from "@/components/post/PostDetail";
-import { sanityClient } from "@/components/studio/client";
-import { urlFor } from "@/components/studio/sanity_utils";
+import { sanityClient } from "@/studio/client";
+import { urlFor } from "@/studio/sanity_utils";
 import { Container } from "@/layouts/Container";
 import React from "react";
 

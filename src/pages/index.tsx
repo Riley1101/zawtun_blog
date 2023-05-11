@@ -5,7 +5,7 @@ import { Container } from "@/layouts/Container";
 import CardList from "@/components/card/CardList";
 
 import { ArticleProps, Category } from "@/type";
-import { sanityClient } from "@/components/studio/client";
+import { sanityClient } from "@/studio/client";
 import Meta from "@/components/Meta";
 interface HomeProps {
   articles: ArticleProps[];

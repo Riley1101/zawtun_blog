@@ -1,8 +1,8 @@
 import { PostDetail } from "@/components/post/PostDetail";
-import { sanityClient } from "@/components/studio/client";
+import { sanityClient } from "@/studio/client";
 import { Container } from "@/layouts/Container";
 import React from "react";
-import { urlFor } from "@/components/studio/sanity_utils";
+import { urlFor } from "@/studio/sanity_utils";
 import Meta from "@/components/Meta";
 const query = `*[_type == "project" && slug.current == $slug][0]{
   ...,

@@ -8,9 +8,9 @@ type BlogsProps = {
 
 const CardList = (props: BlogsProps) => {
   const { blogs } = props;
-
+  console.log(blogs, "i am glog");
   return (
-    <div className="bg-gradient-to-r from-gray-500 via-black to-gray-500 ">
+    <div className="bg-gray-800 ">
       <div className="flex flex-col p-4 gap-4  ">
         <div
           className="text-white shadow-none 
@@ -18,6 +18,7 @@ const CardList = (props: BlogsProps) => {
         >
           {blogs.map((el) => (
             <Card
+              readingTime={el.readingTime}
               key={el._id}
               slug={el.slug}
               title={el.title}

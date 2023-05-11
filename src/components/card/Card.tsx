@@ -3,8 +3,9 @@ import Link from "next/link";
 import { ArticleProps } from "@/type";
 
 const Card = (props: ArticleProps) => {
-  const { title, body, _id, author, slug, _type, description } = props;
-  console.log(description);
+  const { title, body, _id, author, slug, _type, description, readingTime } =
+    props;
+  console.log(props);
   return (
     <Link href={`/${_type}s/${slug.current}`}>
       <div className="flex flex-col gap-4 border hover:border-bd-bg border-bt-bg p-4 rounded-md">
@@ -17,7 +18,7 @@ const Card = (props: ArticleProps) => {
 
         <div className="flex py-4 justify-between text-sm text-gray-400 ">
           <p>April 3,2023</p>
-          <p>2 min read</p>
+          <p>{readingTime} min read</p>
         </div>
       </div>
     </Link>

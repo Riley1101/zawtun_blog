@@ -1,7 +1,7 @@
 import AllPosts from "@/components/allposts/AllPosts";
 import CardList from "@/components/card/CardList";
 import { Container } from "@/layouts/Container";
-import { sanityClient } from "@/components/studio/client";
+import { sanityClient } from "@/studio/client";
 import { ArticleProps, Category } from "@/type";
 import { useEffect, useState } from "react";
 import Meta from "@/components/Meta";

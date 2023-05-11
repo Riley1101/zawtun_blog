@@ -1,7 +1,7 @@
 import React from "react";
 import Profile from "./Profile";
 import { Container } from "@/layouts/Container";
-import { sanityClient } from "@/components/studio/client";
+import { sanityClient } from "@/studio/client";
 import Meta from "@/components/Meta";
 
 export interface UserProps {

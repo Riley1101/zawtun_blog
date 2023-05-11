@@ -11,7 +11,7 @@ type Props = {
 const AllPosts = (props: Props) => {
   const { categories, handleSearch, handleFilterCategory } = props;
   return (
-    <div className="bg-gradient-to-r from-gray-500 via-black to-gray-500 sticky ">
+    <div className="bg-gray-800 sticky ">
       <div className="l-3.5 flex flex-col gap-4 text-white py-8 px-4 lg:w-3/5 lg:mx-auto rounded-md">
         <div className="flex flex-col leading-6 gap-4">
           <h2 className="text-3xl">All Posts</h2>

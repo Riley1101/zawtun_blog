@@ -1,6 +1,6 @@
 import AllPosts from "@/components/allposts/AllPosts";
 import CardList from "@/components/card/CardList";
-import { sanityClient } from "@/components/studio/client";
+import { sanityClient } from "@/studio/client";
 import { Container } from "@/layouts/Container";
 import React, { useEffect, useState } from "react";
 import { ArticleProps, Category } from "@/type";
