@@ -24,6 +24,7 @@ const query = `{
     body,
     'mainImage':mainImage.asset->url,
     description,
+        publishedAt,
     author->{
       name
     }, 
@@ -38,6 +39,8 @@ const query = `{
     body,
     'mainImage':mainImage.asset->url,
     description,
+        publishedAt,
+    
     author->{
       name
     },
@@ -48,7 +51,6 @@ const query = `{
 
 export default function Home(props: HomeProps) {
   const { blogs, projects } = props;
-  console.log(blogs);
   return (
     <>
       <Head>

@@ -26,6 +26,7 @@ const PjCardList = (props: BlogsProps) => {
               description={el.description}
               categories={el.categories}
               mainImage={el.mainImage}
+              publishedAt={el.publishedAt}
             />
           ))}
         </div>

@@ -19,6 +19,7 @@ const query = `{"articles":*[_type == "project"]{
     "categories":categories[0...10]->{title},
     body,
     description,
+        publishedAt,
     'mainImage':mainImage.asset->url,
     author->{
       name
@@ -47,7 +48,6 @@ export default function Projects(props: ProjectProps) {
       setData(articles);
     }
   }, [keyword]);
-  
 
   useEffect(() => {
     if (currentCategory == "All") {

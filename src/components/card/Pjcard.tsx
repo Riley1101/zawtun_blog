@@ -2,8 +2,7 @@ import Image from "next/image";
 import React from "react";
 import Link from "next/link";
 import { ArticleProps } from "@/type";
-
-type Props = {};
+import moment from "moment";
 
 const Pjcard = (props: ArticleProps) => {
   const {
@@ -16,8 +15,9 @@ const Pjcard = (props: ArticleProps) => {
     description,
     readingTime,
     mainImage,
+    publishedAt,
   } = props;
-  console.log(mainImage);
+  console.log(publishedAt);
 
   return (
     <div>
@@ -40,7 +40,7 @@ const Pjcard = (props: ArticleProps) => {
           <p className="text-sm text-gray-300 line-clamp-3">{description}</p>
 
           <div className="flex justify-between py-4 text-sm text-gray-400 ">
-            <p>April 3,2023</p>
+            <p>{moment(publishedAt).format("MMM Do YYYY")}</p>
             <p>{readingTime} min read</p>
           </div>
         </div>

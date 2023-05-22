@@ -19,6 +19,7 @@ const query = `{
     _type,
     description,
     body,
+        publishedAt,
     "categories":categories[0...10]->{title},
     author->{
       name

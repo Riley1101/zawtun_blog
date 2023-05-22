@@ -1,10 +1,22 @@
 import React from "react";
 import Link from "next/link";
 import { ArticleProps } from "@/type";
+import moment from "moment";
 
 const Card = (props: ArticleProps) => {
-  const { title, body, _id, author, slug, _type, description, readingTime } =
-    props;
+  const {
+    title,
+    body,
+    _id,
+    author,
+    slug,
+    _type,
+    description,
+    readingTime,
+    publishedAt,
+  } = props;
+
+  console.log(publishedAt);
 
   return (
     <Link href={`/${_type}s/${slug.current}`}>
@@ -17,7 +29,7 @@ const Card = (props: ArticleProps) => {
         <p className="text-gray-300 line-clamp-5">{description}</p>
 
         <div className="flex justify-between py-4 text-sm text-gray-400 ">
-          <p>April 3,2023</p>
+          <p>{moment(publishedAt).format("MMM Do YYYY")}</p>
           <p>{readingTime} min read</p>
         </div>
       </div>

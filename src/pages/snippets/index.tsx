@@ -19,6 +19,7 @@ const query = `{"articles":*[_type == "snippet"]{
     "categories":categories[0...10]->{title},
     body,
     description,
+        publishedAt,
     author->{
       name
     },

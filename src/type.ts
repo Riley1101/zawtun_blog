@@ -21,4 +21,5 @@ export interface ArticleProps {
   description: string;
   categories: Category[];
   readingTime: number;
+  publishedAt: string;
 }
