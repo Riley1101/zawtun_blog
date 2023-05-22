@@ -7,28 +7,48 @@ import CardList from "@/components/card/CardList";
 import { ArticleProps, Category } from "@/type";
 import { sanityClient } from "@/studio/client";
 import Meta from "@/components/Meta";
+import PjCardList from "@/components/card/PjCardList";
+
 interface HomeProps {
-  articles: ArticleProps[];
+  blogs: ArticleProps[];
+  projects: ArticleProps[];
   categories: Category[];
 }
 
 const query = `{
-  "articles":*[_type == "blog"]{
+  "blogs":*[_type == "blog"][0..3]{
   title,
     slug,
     _id,
     _type,
     body,
+    'mainImage':mainImage.asset->url,
     description,
     author->{
       name
-    }
+    }, 
+    "readingTime": round(length(pt::text(body)) / 5 / 180 ),
+},
+
+"projects":*[_type == "project"][0..3]{
+  title,
+    slug,
+    _id,
+    _type,
+    body,
+    'mainImage':mainImage.asset->url,
+    description,
+    author->{
+      name
+    },
+    "readingTime": round(length(pt::text(body)) / 5 / 180 ),
 },
   "categories":*[_type=="category"]
 }`;
-export default function Home(props: HomeProps) {
-  const { articles } = props;
 
+export default function Home(props: HomeProps) {
+  const { blogs, projects } = props;
+  console.log(blogs);
   return (
     <>
       <Head>
@@ -47,8 +67,10 @@ export default function Home(props: HomeProps) {
                 "I am currently a Freelence Web Developer. My background is Cisco certified Network Engineer.",
             }}
           ></Meta>
+
           <Hero />
-          <CardList blogs={articles} />
+          <PjCardList blogs={projects} />
+          <CardList blogs={blogs} />
         </Container>
       </div>
     </>

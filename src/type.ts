@@ -11,6 +11,7 @@ export interface Category {
 }
 
 export interface ArticleProps {
+  mainImage: string;
   _id: string;
   _type: string;
   author: Author;

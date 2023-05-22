@@ -22,7 +22,8 @@ const query = `{
     "categories":categories[0...10]->{title},
     author->{
       name
-    }
+    },
+    "readingTime": round(length(pt::text(body)) / 5 / 180 )
 },
   "categories":*[_type=="category"]
 }`;
@@ -59,16 +60,6 @@ export default function Blog(props: BlogsProps) {
           }
         });
       });
-
-      // articles.forEach((el) => {
-      //   let eachCategory = el.categories;
-      //   eachCategory?.forEach((item) => {
-      //     if (item.title.toLowerCase() === currentCategories.toLowerCase()) {
-      //       res.push(el);
-      //     }
-      //   });
-      // }
-      //);
       setData(res);
     }
   }, [currentCategories]);

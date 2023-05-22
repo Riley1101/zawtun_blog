@@ -68,36 +68,36 @@ const lists = [
 const Modal = ({ showModal }: Props) => {
   return (
     <div
-      className="bg-gray-800 text-white w-full h-screen fixed z-10 top-0 left-0 opacity-91 grid place-items-center"
+      className="fixed top-0 left-0 z-10 grid w-full h-screen text-gray-400 bg-gray-800 opacity-91 place-items-center"
       onClick={(e) => {
         showModal();
       }}
     >
       <div
-        className="border p-4 max-h-[600px] overflow-auto rounded-lg lg:w-2/5 lg:overflow-y-auto"
+        className="border border-gray-700 p-4 max-h-[600px] overflow-auto rounded-lg lg:w-2/5 lg:overflow-y-auto"
         onClick={(e) => {
           e.stopPropagation();
           e.nativeEvent.stopImmediatePropagation();
         }}
       >
-        <div className="flex-col sticky top-0 w-full p-2 rounded-md lg:flex lg:flex-row ">
+        <div className="sticky top-0 flex-col w-full p-2 rounded-md lg:flex lg:flex-row ">
           <input
             type="text"
             placeholder=" Type a command search "
-            className="flex outline-none bg-bg w-full font-thin focus:first-letter:"
+            className="flex w-full p-4 font-thin bg-transparent border border-gray-700 rounded-md outline-none focus:first-letter:"
           />
         </div>
         <div className="flex flex-col p-2">
           {lists.map((el) => (
-            <div key={el.id} className="py-2 hover:bg-gray-700 px-2 rounded-lg">
+            <div key={el.id} className="px-2 py-2 rounded-lg hover:bg-gray-700">
               <div className="flex justify-between gap-16 ">
-                <div className="flex gap-2 justify-center items-center">
+                <div className="flex items-center justify-center gap-2">
                   <i>{el.icon}</i>
                   <Link href={el.link}>{el.name}</Link>
                 </div>
                 <div className="flex gap-4 lg:gap-8">
                   <p className="bg-bt-bg w-[30px] h-[30px] rounded-md flex justify-center items-center text-white">
-                    g
+                    <span>g</span>
                   </p>
                   <p className="bg-bt-bg p-2 w-[30px] h-[30px] rounded-md flex justify-center items-center text-white">
                     {el.route}

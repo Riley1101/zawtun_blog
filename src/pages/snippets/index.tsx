@@ -16,16 +16,16 @@ const query = `{"articles":*[_type == "snippet"]{
     slug,
     _id,
     _type,
+    "categories":categories[0...10]->{title},
     body,
     description,
-    "categories":categories[0...10]->{title},
     author->{
       name
-    }
+    },
+    "readingTime": round(length(pt::text(body)) / 5 / 180 ),
 },
   "categories":*[_type=="category"]
 }`;
-
 export default function Snippets(props: SnippetsProps) {
   const { articles, categories } = props;
 

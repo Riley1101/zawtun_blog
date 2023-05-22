@@ -4,6 +4,7 @@ import { Container } from "@/layouts/Container";
 import React from "react";
 import { urlFor } from "@/studio/sanity_utils";
 import Meta from "@/components/Meta";
+
 const query = `*[_type == "project" && slug.current == $slug][0]{
   ...,
   }`;

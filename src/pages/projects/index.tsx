@@ -19,6 +19,7 @@ const query = `{"articles":*[_type == "project"]{
     "categories":categories[0...10]->{title},
     body,
     description,
+    'mainImage':mainImage.asset->url,
     author->{
       name
     },
@@ -29,6 +30,7 @@ const query = `{"articles":*[_type == "project"]{
 
 export default function Projects(props: ProjectProps) {
   const { articles, categories } = props;
+  console.log(articles);
 
   const [data, setData] = useState(articles);
   const [keyword, setKeyword] = useState("");
@@ -45,6 +47,7 @@ export default function Projects(props: ProjectProps) {
       setData(articles);
     }
   }, [keyword]);
+  
 
   useEffect(() => {
     if (currentCategory == "All") {
