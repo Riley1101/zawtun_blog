@@ -26,7 +26,7 @@ const Card = (props: ArticleProps) => {
         </h3>
         <p className="text-sm text-gray-400">{author.name}</p>
 
-        <p className="text-gray-300 line-clamp-5">{description}</p>
+        <p className="text-gray-300 line-clamp-4">{description}</p>
 
         <div className="flex justify-between py-4 text-sm text-gray-400 ">
           <p>{moment(publishedAt).format("MMM Do YYYY")}</p>

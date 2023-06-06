@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import Hero from "@/components/home/Hero";
 import { Container } from "@/layouts/Container";
 import CardList from "@/components/card/CardList";
-
+import Title from "@/components/title/Title";
 import { ArticleProps, Category } from "@/type";
 import { sanityClient } from "@/studio/client";
 import Meta from "@/components/Meta";
@@ -71,8 +71,11 @@ export default function Home(props: HomeProps) {
           ></Meta>
 
           <Hero />
+          <Title title="Latest Posts"></Title>
           <PjCardList blogs={projects} />
+          <Title title="Latest Blogs"></Title>
           <CardList blogs={blogs} />
+          {/* <CardList snippets={snippets} /> */}
         </Container>
       </div>
     </>
