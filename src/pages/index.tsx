@@ -12,8 +12,8 @@ import PjCardList from "@/components/card/PjCardList";
 interface HomeProps {
   blogs: ArticleProps[];
   projects: ArticleProps[];
+  snippets: ArticleProps[];
   categories: Category[];
-  // snippets: ArticleProps[];
 }
 
 const query = `{
@@ -47,6 +47,22 @@ const query = `{
     },
     "readingTime": round(length(pt::text(body)) / 5 / 180 ),
 },
+
+"snippets":*[_type == "snippet"][0..3]{
+  title,
+    slug,
+    _id,
+    _type,
+    body,
+    'mainImage':mainImage.asset->url,
+    description,
+        publishedAt,
+    
+    author->{
+      name
+    },
+    "readingTime": round(length(pt::text(body)) / 5 / 80 ),
+},
   "categories":*[_type=="category"]
 }`;
 
@@ -76,7 +92,8 @@ export default function Home(props: HomeProps) {
           <PjCardList blogs={projects} />
           <Title href="/blogs" title="Latest Blogs"></Title>
           <CardList blogs={blogs} />
-          {/* <CardList blogs={snippets} /> */}
+          <Title href="/snippets" title="Latest Snippets"></Title>
+          <CardList blogs={snippets} />
         </Container>
       </div>
     </>
