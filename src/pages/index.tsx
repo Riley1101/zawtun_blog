@@ -13,6 +13,7 @@ interface HomeProps {
   blogs: ArticleProps[];
   projects: ArticleProps[];
   categories: Category[];
+  // snippets: ArticleProps[];
 }
 
 const query = `{
@@ -50,7 +51,7 @@ const query = `{
 }`;
 
 export default function Home(props: HomeProps) {
-  const { blogs, projects } = props;
+  const { blogs, projects, snippets } = props;
   return (
     <>
       <Head>
@@ -71,11 +72,11 @@ export default function Home(props: HomeProps) {
           ></Meta>
 
           <Hero />
-          <Title title="Latest Posts"></Title>
+          <Title href="/projects" title="Latest Projects"></Title>
           <PjCardList blogs={projects} />
-          <Title title="Latest Blogs"></Title>
+          <Title href="/blogs" title="Latest Blogs"></Title>
           <CardList blogs={blogs} />
-          {/* <CardList snippets={snippets} /> */}
+          {/* <CardList blogs={snippets} /> */}
         </Container>
       </div>
     </>

@@ -27,12 +27,12 @@ const Profile = (props: AboutProps) => {
   const { title, description, body, name } = props;
   return (
     <div className="bg-gray-800">
-      <h2 className="p-6 text-3xl text-white border-b-2 py-4 border-bt-bg lg:w-3/5 lg:mx-auto">
+      <h2 className="p-6 py-4 text-3xl text-white border-b-2 border-bt-bg lg:w-3/5 lg:mx-auto">
         About
       </h2>
-      <div className="lg:flex lg:w-3/5 justify-between mx-auto lg:gap-8 ">
+      <div className="justify-between mx-auto lg:flex lg:w-3/5 lg:gap-8 ">
         <div className="flex flex-col">
-          <div className="flex justify-center items-center py-4 ">
+          <div className="flex items-center justify-center py-4 ">
             <Image
               src="/zzt.jpeg"
               alt=""
@@ -41,8 +41,8 @@ const Profile = (props: AboutProps) => {
               className="rounded-full"
             />
           </div>
-          <div className="text-white flex flex-col gap-4 lg:mx-auto lg:justify-between ">
-            <div className="flex flex-col gap-4 justify-center items-center ">
+          <div className="flex flex-col gap-4 text-white lg:mx-auto lg:justify-between ">
+            <div className="flex flex-col items-center justify-center gap-4 ">
               <h2 className="text-3xl">{title}</h2>
               <p> {description}</p>
             </div>
@@ -63,22 +63,24 @@ const Profile = (props: AboutProps) => {
           </div>
         </div>
         <div>
-          <div className="flex flex-col gap-4 items-center p-4">
-            <p className=" p-2 leading-8 text-white">
-              I am currently a Freelence Web Developer. My background is Cisco
-              certified Network Engineer . I switched my career to Web Developer
-              from Network Engineer at 2017. Before Freeelencer I was frontEnd
-              Developer in Teromac and Arcon Technologies at New York City.
-              <br />I mainly working building UI, authorizations, payment
-              integrations. I using React , Redux, NextJS , TypeScript , Jest,
-              SQl, NoSql, RESTful , Tailwind , Git. I mainly working building
-              UI, authorizations, payment integrations and Using React, NextJS
-              TypeScript and CMS integration. I mainly working building UI,
-              authorizations, payment integrations and Using React, NextJS
-              TypeScript and CMS integration.
+          <div className="flex flex-col items-center gap-4 p-4">
+            <p className="p-2 leading-8 text-white ">
+              I am a professional freelance web developer with a background as a
+              Cisco certified Network Engineer. In 2017, I made a successful
+              career transition from Network Engineering to Web Development.
+              <br />
+              Prior to my freelance work, I gained valuable experience as a
+              Frontend Developer at Teromac and Arcon Technologies in New York
+              City. My primary focus as a web developer revolves around building
+              user interfaces, implementing robust authorization systems, and
+              integrating secure payment gateways.
+              <br />I possess expertise in a wide range of technologies and
+              frameworks, including React, Redux, Next.js, TypeScript, Jest,
+              SQL, NoSQL, RESTful APIs, Tailwind CSS, and Git.
+              <br />
             </p>
           </div>
-          <div className="flex flex-col p-6 gap-4 text-white font-semibold ">
+          <div className="flex flex-col gap-4 p-6 font-semibold text-white ">
             My current Tech Stack:
             <div className="flex gap-4">
               <SiJavascript className="w-[30px] h-[30px] text-yellow-600" />

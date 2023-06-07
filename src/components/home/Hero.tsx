@@ -7,7 +7,7 @@ type Props = {};
 
 const Hero = (props: Props) => {
   return (
-    <div className="w-full py-8 mx-auto overflow-x-auto text-white bg-gray-800">
+    <div className="w-full py-8 pb-6 mx-auto overflow-x-auto text-white bg-gray-800">
       <div className="flex flex-col-reverse items-center justify-center w-full gap-4 mx-auto lg:w-3/5 lg:mx-auto lg:flex-row lg:justify-between">
         <div className="flex flex-col gap-8 p-2 duration-1000 animate-fade-in-down scrollbar">
           <div className="flex flex-col gap-8">
@@ -20,10 +20,8 @@ const Hero = (props: Props) => {
             <div className="text-2xl text-center text-gray-400 leading-12 lg:text-start lg:text-2xl">
               <p className="text-[19px]">
                 I am a web developer with expertise in software engineering
-                practices throughout the entire software development life cycle,
-                from design to implementation to integration. I possess skills
-                in utilizing creative UI frameworks to connect exceptional
-                assets with users.
+                practices throughout the entire <strong>SDLC</strong>, from
+                design to implementation to integration.
               </p>
             </div>
           </div>
