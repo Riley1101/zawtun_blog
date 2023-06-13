@@ -37,7 +37,7 @@ const Pjcard = (props: ArticleProps) => {
           </h3>
           <p className="my-2 text-sm text-gray-400">{author.name}</p>
 
-          <p className="text-sm text-gray-300 line-clamp-3">{description}</p>
+          <p className="text-gray-300 line-clamp-3">{description}</p>
 
           <div className="flex justify-between py-4 text-sm text-gray-400 ">
             <p>{moment(publishedAt).format("MMM Do YYYY")}</p>

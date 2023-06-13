@@ -16,8 +16,6 @@ const Card = (props: ArticleProps) => {
     publishedAt,
   } = props;
 
-  console.log(publishedAt);
-
   return (
     <Link href={`/${_type}s/${slug.current}`}>
       <div className="flex flex-col gap-4 p-4 border rounded-md hover:border-bd-bg border-bt-bg">
