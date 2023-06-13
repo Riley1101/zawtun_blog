@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
+
 import Modal from "./Modal";
-import { AiOutlineBars } from "react-icons/Ai";
+import { AiOutlineBars } from "react-icons/ai";
 
 type Props = {};
 
