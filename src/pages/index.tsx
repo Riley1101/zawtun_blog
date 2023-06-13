@@ -17,7 +17,7 @@ interface HomeProps {
 }
 
 const query = `{
-  "blogs":*[_type == "blog"][0..3]{
+  "blogs":*[_type == "blog"][0..2]{
   title,
     slug,
     _id,
@@ -29,10 +29,10 @@ const query = `{
     author->{
       name
     }, 
-    "readingTime": round(length(pt::text(body)) / 5 / 180 ),
+    "readingTime": round(length(pt::text(body)) / 5 / 240 ),
 },
 
-"projects":*[_type == "project"][0..3]{
+"projects":*[_type == "project"][0..2]{
   title,
     slug,
     _id,
@@ -45,10 +45,10 @@ const query = `{
     author->{
       name
     },
-    "readingTime": round(length(pt::text(body)) / 5 / 180 ),
+    "readingTime": round(length(pt::text(body)) / 5 / 240 ),
 },
 
-"snippets":*[_type == "snippet"][0..3]{
+"snippets":*[_type == "snippet"][0..2]{
   title,
     slug,
     _id,
@@ -61,7 +61,7 @@ const query = `{
     author->{
       name
     },
-    "readingTime": round(length(pt::text(body)) / 5 / 80 ),
+    "readingTime": round(length(pt::text(body)) / 5 / 240 ),
 },
   "categories":*[_type=="category"]
 }`;

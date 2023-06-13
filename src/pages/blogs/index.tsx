@@ -24,7 +24,7 @@ const query = `{
     author->{
       name
     },
-    "readingTime": round(length(pt::text(body)) / 5 / 180 )
+    "readingTime": round(length(pt::text(body)) / 5 / 240 )
 },
   "categories":*[_type=="category"]
 }`;

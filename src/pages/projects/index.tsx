@@ -11,7 +11,7 @@ interface ProjectProps {
   categories: Category[];
 }
 
-const query = `{"articles":*[_type == "project"]{
+const query = `{"articles":*[_type == "project"][0...3]{
   title,
     slug,
     _id,

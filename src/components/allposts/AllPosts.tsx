@@ -13,11 +13,11 @@ const AllPosts = (props: Props) => {
   return (
     <div className="sticky bg-gray-800 ">
       <div className="l-3.5 flex flex-col gap-4 text-white py-8 px-2 lg:w-3/5 lg:mx-auto rounded-md">
-        <div className="flex flex-col gap-4 leading-6">
-          <h2 className="text-3xl">All Posts</h2>
-          <p className="-scroll-ml-3.5">
-            I mainly building UI, authorizations, payment integrations. I using
-            React , Redux, NextJS , TypeScript.
+        <div className="flex flex-col gap-4 leading-6 text-gray-400">
+          <h2 className="text-3xl">Tasks</h2>
+          <p className="-scroll-ml-3.5 ">
+            I mainly building UI, Authorization, Authentication and
+            Integrations.
           </p>
         </div>
         <div className="flex p-2 rounded-md bg-nav-bt">

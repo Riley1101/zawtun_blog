@@ -21,7 +21,7 @@ const Card = (props: ArticleProps) => {
   return (
     <Link href={`/${_type}s/${slug.current}`}>
       <div className="flex flex-col gap-4 p-4 border rounded-md hover:border-bd-bg border-bt-bg">
-        <h3 className="text-2xl font-semibold text-transparent line-clamp-1 bg-clip-text bg-gradient-to-br from-pink-400 to-sky-600">
+        <h3 className="text-xl font-semibold text-transparent line-clamp-1 bg-clip-text bg-gradient-to-br from-pink-400 to-sky-600">
           {title}
         </h3>
         <p className="text-sm text-gray-400">{author.name}</p>

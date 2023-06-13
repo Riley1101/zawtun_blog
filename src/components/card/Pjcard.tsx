@@ -32,8 +32,8 @@ const Pjcard = (props: ArticleProps) => {
               className="aspect-video"
             />
           </div>
-          <h3 className="mt-4 text-2xl font-semibold text-transparent line-clamp-1 bg-clip-text bg-gradient-to-br from-pink-400 to-sky-600">
-            {title}
+          <h3 className="mt-4 text-xl font-semibold text-transparent line-clamp-1 bg-clip-text bg-gradient-to-br from-pink-400 to-sky-600">
+            {/* {title} */}
           </h3>
           <p className="my-2 text-sm text-gray-400">{author.name}</p>
 

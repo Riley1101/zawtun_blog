@@ -25,7 +25,7 @@ const Hero = (props: Props) => {
               </p>
             </div>
           </div>
-          <div className="flex gap-4 py-2">
+          <div className="flex justify-center gap-4 py-2 lg:justify-start">
             <Link
               className="p-2 bg-gray-800 border rounded-lg hover:border-bd-bg border-bt-bg"
               href="/blogs"
