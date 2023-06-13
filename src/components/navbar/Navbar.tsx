@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Link from "next/link";
-
 import Modal from "./Modal";
 import { AiOutlineBars } from "react-icons/ai";
 
