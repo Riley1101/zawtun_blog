@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 import Lottie from "react-lottie-player";
 import lotti from "./lotti_02.json";
-import Gradient from "../gradient/BackGround";
+import Gradient from "../gradient/Gradient";
 
 type Props = {};
 
