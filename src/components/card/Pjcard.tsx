@@ -17,7 +17,6 @@ const Pjcard = (props: ArticleProps) => {
     mainImage,
     publishedAt,
   } = props;
-  console.log(publishedAt);
 
   return (
     <div>

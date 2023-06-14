@@ -92,7 +92,7 @@ export default function Snippets(props: SnippetsProps) {
 
 export async function getStaticProps() {
   const data = await sanityClient.fetch(query);
-  console.log(data);
+
   return {
     props: {
       ...data,

@@ -11,7 +11,7 @@ interface ProjectProps {
   categories: Category[];
 }
 
-const query = `{"articles":*[_type == "project"][0...3]{
+const query = `{"articles":*[_type == "project"]{
   title,
     slug,
     _id,
@@ -71,6 +71,7 @@ export default function Projects(props: ProjectProps) {
   const handleFilterCategory = (title: string) => {
     setCurrentCategory(title);
   };
+
   const handleSearch = (e: any) => {
     setKeyword(e.target.value);
   };

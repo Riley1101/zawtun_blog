@@ -102,7 +102,7 @@ export default function Home(props: HomeProps) {
 
 export async function getStaticProps() {
   const data = await sanityClient.fetch(query);
-  console.log(data);
+
   return {
     props: {
       ...data,

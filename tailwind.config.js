@@ -15,6 +15,7 @@ module.exports = {
         "nav-bt": "#3F3F46",
         "bd-bg": "#38BDF9",
         "bt-bg": "#38BD",
+        menu: "#AB68BB",
       },
 
       keyframes: {

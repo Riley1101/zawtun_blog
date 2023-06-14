@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Modal from "./Modal";
-import { AiOutlineBars } from "react-icons/ai";
+import { CgMenuGridO } from "react-icons/cg";
 
 type Props = {};
 
@@ -12,17 +12,17 @@ const Navbar = (props: Props) => {
     setModal(!modal);
   };
   return (
-    <div className="sticky top-0 z-10 bg-gray-800 ">
+    <div className="sticky top-0 z-10 bg-gray-800 backdrop-filter backdrop-blur-xl bg-opacity-10 ">
       <div className="flex justify-between gap-4 py-2 duration-500 lg:w-3/5 lg:mx-auto animate-fade-in-down">
-        <div className="items-center p-2 m-4 text-white bg-gray-800 rounded-full">
+        <div className="items-center p-2 m-4 text-white rounded-full">
           <Link href="/">
-            <span className="text-transparent border-b-2 border-transparent hover:border-bd-bg bg-clip-text bg-gradient-to-br from-pink-400 to-sky-600 hover:text-bd-bg ">
+            <span className="text-transparent border-b-2 border-transparent hover:border-bd-bg bg-clip-text bg-gradient-to-br from-purple-400 to-sky-600 hover:text-bd-bg ">
               Home
             </span>
           </Link>
         </div>
         <div className="flex justify-around gap-4 ">
-          <div className="invisible gap-8 hover:text-white lg:flex lg:visible lg:justify-center lg:items-center ">
+          <div className="hidden gap-8 hover:text-white lg:flex lg:visible lg:justify-center lg:items-center ">
             <Link
               href="/blogs"
               className="text-transparent border-b-2 border-transparent hover:border-bd-bg bg-clip-text bg-gradient-to-br from-pink-400 to-sky-600 hover:text-bd-bg "
@@ -49,10 +49,10 @@ const Navbar = (props: Props) => {
             </Link>
           </div>
           <div
-            className="flex bg-gray-800 text-white my-auto justify-center items-center rounded-md w-[40px] h-[40px] mx-4 lg:bg-none lg:hidden"
+            className="flex items-center justify-center mx-4 my-auto text-white bg-gray-800 rounded-md lg:bg-none lg:hidden bg-clip-text bg-gradient-to-br from-pink-400 to-sky-600 hover:text-bd-bg"
             onClick={showModal}
           >
-            <AiOutlineBars className="w-[35px] h-[35px]" />
+            <CgMenuGridO className="w-[20px] h-[20px] text-menu " />
           </div>
         </div>
       </div>

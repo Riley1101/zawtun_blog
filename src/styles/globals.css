@@ -36,6 +36,11 @@
   }
 }
 
+.blob-blur {
+  opacity: 50%;
+  filter: blur(65px);
+}
+
 @layer components {
   /* This won't be included in your compiled CSS unless you actually use it */
   .card {
