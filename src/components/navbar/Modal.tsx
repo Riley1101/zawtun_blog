@@ -90,10 +90,10 @@ const Modal = ({ showModal }: Props) => {
         <div className="flex flex-col p-2">
           {lists.map((el) => (
             <div key={el.id} className="px-2 py-2 rounded-lg hover:bg-gray-700">
-              <div className="flex justify-between gap-16 ">
+              <Link href={el.link} className="flex justify-between gap-16 ">
                 <div className="flex items-center justify-center gap-2">
                   <i>{el.icon}</i>
-                  <Link href={el.link}>{el.name}</Link>
+                  <span>{el.name}</span>
                 </div>
                 <div className="flex gap-4 lg:gap-8">
                   <p className="bg-bt-bg w-[30px] h-[30px] rounded-md flex justify-center items-center text-white">
@@ -103,7 +103,7 @@ const Modal = ({ showModal }: Props) => {
                     {el.route}
                   </p>
                 </div>
-              </div>
+              </Link>
             </div>
           ))}
         </div>
