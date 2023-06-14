@@ -8,7 +8,7 @@ type Props = {};
 
 const Hero = (props: Props) => {
   return (
-    <div className="relative w-full py-8 pb-6 mx-auto overflow-x-auto text-white bg-gray-800">
+    <div className="relative w-full py-8 pb-6 mx-auto text-white bg-gray-800">
       <Gradient />
       <div className="flex flex-col-reverse items-center justify-center w-full gap-4 mx-auto lg:w-3/5 lg:mx-auto lg:flex-row lg:justify-between">
         <div className="flex flex-col gap-8 p-2 duration-1000 animate-fade-in-down scrollbar">
