@@ -1,12 +1,22 @@
 import Link from "next/link";
 import React from "react";
-import Lottie from "react-lottie-player";
+import dynamic from "next/dynamic";
 import lotti from "./lotti_02.json";
+import { useEffect, useState } from "react";
 import Gradient from "../gradient/Gradient";
+const Lottie = dynamic(() => import("react-lottie-player"), {
+  ssr: false,
+});
 
 type Props = {};
 
 const Hero = (props: Props) => {
+  const [isServer, setIsServer] = useState(true);
+  useEffect(() => {
+    if (typeof window !== undefined) {
+      setIsServer(false);
+    }
+  }, []);
   return (
     <div className="relative w-full py-8 pb-6 mx-auto text-white bg-gray-800">
       <Gradient />
@@ -48,12 +58,14 @@ const Hero = (props: Props) => {
           </div>
         </div>
         <div className="flex justify-center w-2/4 origin-center lg:justify-end md:py-12 ">
-          <Lottie
-            className="animate-wiggle duration-1000 w-[200px] aspect-square md:w-[300px] "
-            loop
-            animationData={lotti}
-            play
-          />
+          {!isServer && (
+            <Lottie
+              className="animate-wiggle duration-1000 w-[200px] aspect-square md:w-[300px] "
+              loop
+              animationData={lotti}
+              play
+            />
+          )}
         </div>
       </div>
     </div>

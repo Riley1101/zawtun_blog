@@ -83,7 +83,7 @@ export default function Home(props: HomeProps) {
               title: "Home| Zaw Z Tun",
               image: "/zzt.jpeg",
               description:
-                "I am currently a Freelence Web Developer. My background is Cisco certified Network Engineer.",
+                "I am FullStack Engineer. My background is Cisco certified Network Engineer.",
             }}
           ></Meta>
 

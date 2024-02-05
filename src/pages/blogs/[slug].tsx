@@ -48,6 +48,7 @@ interface ShortSlug {
     current: string;
   };
 }
+
 export async function getStaticPaths() {
   const urlQuery = `*[_type == "blog" ]{ slug }`;
   const renderPages: ShortSlug[] = await sanityClient.fetch(urlQuery);

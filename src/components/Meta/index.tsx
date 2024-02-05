@@ -13,7 +13,7 @@ type Props = {
 const defaultMeta = {
   title: "Zaw Z Tun",
   description:
-    "I am a Freelence Web Developer. My background is Cisco certified Network Engineer.",
+    "I am a Full Stack Engineer. My background is Cisco certified Network Engineer.",
   image: "/zzt.jpeg",
   url: "https://metatags.io/",
 };
