@@ -25,7 +25,7 @@ const CardList = (props: BlogsProps) => {
               _type={el._type}
               description={el.description}
               categories={el.categories}
-              mainImage={el.mainImage}
+              mainImage={el?.mainImage}
               publishedAt={el.publishedAt}
             />
           ))}

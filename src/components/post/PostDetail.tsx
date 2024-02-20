@@ -32,7 +32,7 @@ export const PostDetail = ({ data }: Props) => {
           <div className="flex justify-center w-full mx-auto aspect-video">
             <Image
               className="object-cover rounded-md aspect-video"
-              src={urlFor(data.mainImage).width(1000).url()}
+              src={urlFor(data?.mainImage).width(1000).url()}
               width={800}
               height={250}
               alt=""

@@ -19,8 +19,6 @@ const query = `*[_type == "blog" && slug.current == $slug][0]{
   }`;
 
 const Post = ({ data }: Props) => {
-  console.log(data.mainImage);
-  console.log(!!!data?.mainImage ? "NULL" : "NOT NULL");
   return (
     <Container>
       <Meta
