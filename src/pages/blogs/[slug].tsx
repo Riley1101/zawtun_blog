@@ -4,25 +4,34 @@ import React from "react";
 import { PostDetail } from "@/components/post/PostDetail";
 import { sanityClient } from "@/studio/client";
 import Meta from "@/components/Meta";
+import { SanityAsset } from "@sanity/image-url/lib/types/types";
 import { urlFor } from "@/studio/sanity_utils";
 
-type Props = { data: any };
+type Props = {
+  data: {
+    mainImage: SanityAsset;
+    [key: string]: any;
+  };
+};
 
 const query = `*[_type == "blog" && slug.current == $slug][0]{
   ...,
   }`;
 
 const Post = ({ data }: Props) => {
+  console.log(data.mainImage);
+  console.log(!!!data?.mainImage ? "NULL" : "NOT NULL");
   return (
     <Container>
       <Meta
         meta={{
-          title: data.title,
-          image: urlFor(data.mainImage).width(600).url(),
-          description: data.description,
+          title: data?.title,
+          image: !!data?.mainImage && urlFor(data?.mainImage).width(600).url(),
+          description: data?.description,
         }}
       ></Meta>
-      <PostDetail data={data} />
+      {/* <PostDetail data={data} /> */}
+      <>s</>
     </Container>
   );
 };

@@ -1,3 +1,4 @@
+import { SanityAsset } from "@sanity/image-url/lib/types/types";
 import { sanityClient } from "./client";
 export async function getProjects() {
   let data = await sanityClient.fetch("*");
@@ -12,6 +13,7 @@ const builder = imageUrlBuilder(sanityClient);
 // Then we like to make a simple function like this that gives the
 // builder an image and returns the builder for you to specify additional
 // parameters:
-export function urlFor(source: any) {
-  return builder.image(source);
+export function urlFor(source: SanityAsset) {
+  const image = builder.image(source);
+  return image;
 }

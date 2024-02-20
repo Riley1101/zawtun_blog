@@ -31,7 +31,6 @@ const query = `{"articles":*[_type == "project"]{
 
 export default function Projects(props: ProjectProps) {
   const { articles, categories } = props;
-  console.log(articles);
 
   const [data, setData] = useState(articles);
   const [keyword, setKeyword] = useState("");
@@ -78,14 +77,14 @@ export default function Projects(props: ProjectProps) {
 
   return (
     <div>
-      <Meta
+      {/* <Meta
         meta={{
           title: "Project | Zaw Z Tun",
           image: "/images/meta_04.jpeg",
           description:
             "So you must ensure that every revolutionary idea you have goes into development with the appropriate rendering pattern.",
         }}
-      ></Meta>
+      ></Meta> */}
       <Container>
         <AllPosts
           categories={categories}

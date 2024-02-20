@@ -13,14 +13,15 @@ type Props = { data: any };
 const Post = ({ data }: Props) => {
   return (
     <Container>
-      <Meta
+      {/* <Meta
         meta={{
-          title: data.title,
-          image: urlFor(data.mainImage).width(600).url(),
-          description: data.description,
+          title: data?.title,
+          image: urlFor(data?.mainImage).width(600).url(),
+          description: data?.description,
         }}
-      ></Meta>
-      <PostDetail data={data} />
+      ></Meta> */}
+      {/* <PostDetail data={data} /> */}
+      <></>
     </Container>
   );
 };
