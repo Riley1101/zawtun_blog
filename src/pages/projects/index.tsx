@@ -37,7 +37,6 @@ export default function Projects(props: ProjectProps) {
   const [currentCategory, setCurrentCategory] = useState("");
 
   useEffect(() => {
-    // search filter logic
     if (keyword.length > 3) {
       let temp = data.filter((el) =>
         el.title.toLowerCase().includes(keyword.toLowerCase())
@@ -77,14 +76,14 @@ export default function Projects(props: ProjectProps) {
 
   return (
     <div>
-      {/* <Meta
+      <Meta
         meta={{
           title: "Project | Zaw Z Tun",
           image: "/images/meta_04.jpeg",
           description:
             "So you must ensure that every revolutionary idea you have goes into development with the appropriate rendering pattern.",
         }}
-      ></Meta> */}
+      ></Meta>
       <Container>
         <AllPosts
           categories={categories}

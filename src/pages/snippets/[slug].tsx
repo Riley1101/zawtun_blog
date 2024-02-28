@@ -4,24 +4,41 @@ import { sanityClient } from "@/studio/client";
 import { urlFor } from "@/studio/sanity_utils";
 import { Container } from "@/layouts/Container";
 import React from "react";
+import { SanityAsset } from "@sanity/image-url/lib/types/types";
 
 const query = `*[_type == "snippet" && slug.current == $slug][0]{
   ...,
   }`;
-type Props = { data: any };
+type Props = {
+  data: {
+    mainImage: SanityAsset;
+    [key: string]: any;
+  };
+};
 
 const Post = ({ data }: Props) => {
   return (
+    // <Container>
+    //   <Meta
+    //     meta={{
+    //       title: data?.title,
+    //       image: urlFor(data?.mainImage).width(600).url(),
+    //       description: data?.description,
+    //     }}
+    //   ></Meta>
+    //   <PostDetail data={data} />
+    //   <></>
+    // </Container>
+
     <Container>
-      {/* <Meta
+      <Meta
         meta={{
           title: data?.title,
-          image: urlFor(data?.mainImage).width(600).url(),
+          image: !!data?.mainImage && urlFor(data?.mainImage).width(600).url(),
           description: data?.description,
         }}
-      ></Meta> */}
-      {/* <PostDetail data={data} /> */}
-      <></>
+      ></Meta>
+      <PostDetail data={data} />
     </Container>
   );
 };

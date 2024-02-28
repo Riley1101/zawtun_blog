@@ -28,8 +28,7 @@ const Post = ({ data }: Props) => {
           description: data?.description,
         }}
       ></Meta>
-      {/* <PostDetail data={data} /> */}
-      <>s</>
+      <PostDetail data={data} />
     </Container>
   );
 };
