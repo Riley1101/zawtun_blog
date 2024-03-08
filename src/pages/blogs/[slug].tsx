@@ -5,7 +5,7 @@ import { PostDetail } from "@/components/post/PostDetail";
 import { sanityClient } from "@/studio/client";
 import Meta from "@/components/Meta";
 import { SanityAsset } from "@sanity/image-url/lib/types/types";
-import { urlFor } from "@/studio/sanity_utils";
+import { useNextSanityImage } from "next-sanity-image";
 
 type Props = {
   data: {
@@ -19,12 +19,13 @@ const query = `*[_type == "blog" && slug.current == $slug][0]{
   }`;
 
 const Post = ({ data }: Props) => {
+  const nextImage = useNextSanityImage(sanityClient, data?.mainImage);
   return (
     <Container>
       <Meta
         meta={{
           title: data?.title,
-          image: !!data?.mainImage && urlFor(data?.mainImage).width(600).url(),
+          image: nextImage?.src,
           description: data?.description,
         }}
       ></Meta>

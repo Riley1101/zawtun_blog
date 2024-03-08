@@ -5,7 +5,6 @@ import { Container } from "@/layouts/Container";
 import React, { useEffect, useState } from "react";
 import { ArticleProps, Category } from "@/type";
 import Meta from "@/components/Meta";
-import { urlFor } from "@/studio/sanity_utils";
 interface ProjectProps {
   articles: ArticleProps[];
   categories: Category[];

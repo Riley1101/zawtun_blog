@@ -1,5 +1,6 @@
 import { SanityAsset } from "@sanity/image-url/lib/types/types";
 import { sanityClient } from "./client";
+
 export async function getProjects() {
   let data = await sanityClient.fetch("*");
   return data;

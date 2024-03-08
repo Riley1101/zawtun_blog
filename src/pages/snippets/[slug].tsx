@@ -1,10 +1,10 @@
 import Meta from "@/components/Meta";
 import { PostDetail } from "@/components/post/PostDetail";
 import { sanityClient } from "@/studio/client";
-import { urlFor } from "@/studio/sanity_utils";
 import { Container } from "@/layouts/Container";
 import React from "react";
 import { SanityAsset } from "@sanity/image-url/lib/types/types";
+import { useNextSanityImage } from "next-sanity-image";
 
 const query = `*[_type == "snippet" && slug.current == $slug][0]{
   ...,
@@ -17,6 +17,7 @@ type Props = {
 };
 
 const Post = ({ data }: Props) => {
+  const nextImage = useNextSanityImage(sanityClient, data?.mainImage);
   return (
     // <Container>
     //   <Meta
@@ -34,7 +35,7 @@ const Post = ({ data }: Props) => {
       <Meta
         meta={{
           title: data?.title,
-          image: !!data?.mainImage && urlFor(data?.mainImage).width(600).url(),
+          image: nextImage?.src,
           description: data?.description,
         }}
       ></Meta>

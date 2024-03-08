@@ -6,8 +6,6 @@ import moment from "moment";
 const Card = (props: ArticleProps) => {
   const {
     title,
-    body,
-    _id,
     author,
     slug,
     _type,
