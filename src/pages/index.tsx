@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { Inter } from "next/font/google";
 import Hero from "@/components/home/Hero";
 import { Container } from "@/layouts/Container";
 import CardList from "@/components/card/CardList";

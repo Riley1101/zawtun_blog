@@ -1,10 +1,12 @@
 interface Author {
   name: string;
 }
+
 interface Slug {
   type: string;
   current: string;
 }
+
 export interface Category {
   title: string;
   _id: string;

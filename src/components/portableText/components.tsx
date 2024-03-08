@@ -2,7 +2,7 @@ import { PortableTextComponents } from "@portabletext/react";
 
 import Codeblock from "./Codeblock";
 import { SanityImage } from "./Image";
-import Link from "next/link";
+
 const myPortableTextComponents: PortableTextComponents = {
   block: {
     h1: ({ children }: any) => (

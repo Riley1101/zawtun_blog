@@ -1,12 +1,19 @@
 import React, { useEffect, useState } from "react";
 import { PortableText } from "@portabletext/react";
 import { myPortableTextComponents } from "../portableText/components";
-import { urlFor } from "../../studio/sanity_utils";
 import Image from "next/image";
+import { useNextSanityImage } from "next-sanity-image";
+import { sanityClient } from "@/studio/client";
+import { SanityAsset } from "@sanity/image-url/lib/types/types";
 type Props = { data: any };
 
 export const PostDetail = ({ data }: Props) => {
   const [scroll, setScroll] = useState(0);
+
+  const nextImage = useNextSanityImage(
+    sanityClient,
+    data?.mainImage as SanityAsset,
+  );
 
   const handleScroll = () => {
     const position = window.pageYOffset;
@@ -23,6 +30,7 @@ export const PostDetail = ({ data }: Props) => {
     }
   }, []);
 
+  if (!!data) return null;
   return (
     <>
       <div
@@ -30,22 +38,24 @@ export const PostDetail = ({ data }: Props) => {
       >
         <div className="flex flex-col p-8 lg:w-[50%] mx-auto  border-gray-600 bg-transparent rounded-md">
           <div className="flex justify-center w-full mx-auto aspect-video">
-            <Image
-              className="object-cover rounded-md aspect-video"
-              src={urlFor(data?.mainImage).width(1000).url()}
-              width={800}
-              height={250}
-              alt=""
-            />
+            {!!nextImage && (
+              <Image
+                className="object-cover rounded-md aspect-video"
+                src={nextImage.src}
+                width={800}
+                height={250}
+                alt=""
+              />
+            )}
           </div>
           <h1 className="mt-6 text-xl font-bold text-transparent lg:text-3xl line-clamp-1 bg-clip-text bg-gradient-to-r from-indigo-700 via-purple-500 to-pink-500">
-            {data.title}
+            {data?.title}
           </h1>
 
           {/* <img src={urlFor(data.mainImage).width(600).url()} className="my-4" /> */}
           <div className="leading-[1.5]">
             <PortableText
-              value={data.body}
+              value={data?.body}
               components={myPortableTextComponents}
             />
           </div>
