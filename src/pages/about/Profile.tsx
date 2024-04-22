@@ -14,9 +14,10 @@ import { FaDocker } from "react-icons/fa";
 import { SiMongodb } from "react-icons/si";
 import { DiMysql } from "react-icons/di";
 import { DiJava } from "react-icons/di";
-
+import { PortableText } from "@portabletext/react";
 import Image from "next/image";
 import Link from "next/link";
+import { myPortableTextComponents } from "@/components/portableText/components";
 
 interface AboutProps {
   title: string;
@@ -66,21 +67,7 @@ const Profile = (props: AboutProps) => {
         </div>
         <div>
           <div className="flex flex-col items-center gap-4 p-4">
-            <p className="p-2 leading-8 text-white ">
-              I am a professional freelance web developer with a background as a
-              Cisco certified Network Engineer. In 2017, I made a successful
-              career transition from Network Engineering to Web Development.
-              <br />
-              Prior to my freelance work, I gained valuable experience as a
-              Frontend Developer at Teromac and Arcon Technologies in New York
-              City. My primary focus as a web developer revolves around building
-              user interfaces, implementing robust authorization systems, and
-              integrating secure payment gateways.
-              <br />I possess expertise in a wide range of technologies and
-              frameworks, including React, Redux, Next.js, TypeScript, Jest,
-              SQL, NoSQL, RESTful APIs, Tailwind CSS, and Git.
-              <br />
-            </p>
+            <PortableText value={body} components={myPortableTextComponents} />
           </div>
           <div className="flex flex-col gap-4 p-6 font-semibold text-white ">
             My current Tech Stack:
