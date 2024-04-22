@@ -24,7 +24,7 @@ interface Props {
 }
 const About = (props: Props) => {
   const { user } = props;
-  // const { title, body, author, description } = user;
+  //const { title, body, description } = user;
   return (
     <div>
       <Container>
@@ -33,7 +33,7 @@ const About = (props: Props) => {
             title: "About | Zaw Z Tun",
             image: "/zzt.jpeg",
             description:
-              "I am currently a Freelence Web Developer. My background is Cisco certified Network Engineer.",
+              "I am  a Software Engineer. My background is Cisco certified Network Engineer.",
           }}
         ></Meta>
         <Profile

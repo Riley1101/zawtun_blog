@@ -12,6 +12,8 @@ import { FaAws } from "react-icons/fa";
 import { TbBrandNextjs } from "react-icons/tb";
 import { FaDocker } from "react-icons/fa";
 import { SiMongodb } from "react-icons/si";
+import { DiMysql } from "react-icons/di";
+import { DiJava } from "react-icons/di";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -83,12 +85,14 @@ const Profile = (props: AboutProps) => {
           <div className="flex flex-col gap-4 p-6 font-semibold text-white ">
             My current Tech Stack:
             <div className="flex gap-4">
+              <DiJava className="w-[35px] h-[35px] text-yellow-600" />
               <SiJavascript className="w-[30px] h-[30px] text-yellow-600" />
               <SiTypescript className="w-[30px] h-[30px] text-sky-600" />
               <IoLogoNodejs className="w-[30px] h-[30px] text-green-400" />
               <GrReactjs className="w-[30px] h-[30px] text-sky-600" />
               <TbBrandNextjs className="w-[30px] h-[30px] text-black-600" />
               <GrGraphQl className="w-[30px] h-[30px] text-red-700" />
+              <DiMysql className="w-[35px] h-[35px] text-blue-300" />
               <SiMongodb className="w-[30px] h-[30px] text-green-600" />
               <FaDocker className="w-[30px] h-[30px] text-sky-600" />
               <FaAws className="w-[30px] h-[30px] text-yellow-400" />
