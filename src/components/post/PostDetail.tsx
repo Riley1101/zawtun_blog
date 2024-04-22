@@ -30,7 +30,6 @@ export const PostDetail = ({ data }: Props) => {
     }
   }, []);
 
-  if (!!data) return null;
   return (
     <>
       <div
