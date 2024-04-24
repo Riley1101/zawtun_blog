@@ -32,7 +32,7 @@ const Hero = (props: Props) => {
             <div className="text-2xl text-center text-gray-400 leading-12 lg:text-start lg:text-2xl">
               <p className="text-[19px]">
                 I am an experienced
-                <strong>Full Stack Software Engineer</strong> skilled in the
+                <strong> {" "} Full Stack Software Engineer</strong> skilled in the
                 end-to-end software engineering process, from design to
                 integration.
               </p>
